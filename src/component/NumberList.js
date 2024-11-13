@@ -12,4 +12,4 @@ const NumberList = () => {
   return <div>{output}</div>;
 };
 
-export default NumberList; 
+export default NumberList;
