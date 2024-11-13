@@ -1,0 +1,270 @@
+/* General styling */
+.text {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .schedule {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows:
+      [tracks] auto
+      [time-1000] 1fr
+      [time-1015] 1fr
+      [time-1030] 1fr
+      [time-1045] 1fr
+      [time-1100] 1fr
+      [time-1115] 1fr
+      [time-1130] 1fr
+      [time-1145] 1fr
+      [time-1200] 1fr
+      [time-1215] 1fr
+      [time-1230] 1fr
+      [time-1245] 1fr;
+    grid-template-columns:
+      [times] 4em
+      [track-1-start] 3fr
+      [track-2-start] 1fr;
+    margin-top: 20px;
+  }
+  
+  /* Styling for time slots */
+
+  
+  .time-slot {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  
+
+  
+  /* Styling for session slots */
+  .session {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .session-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .session-time {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .session-track {
+    display: block;
+    font-size: 0.9rem;
+    color: #00796b;
+  }
+  
+  .session-presenter {
+    display: block;
+    font-size: 0.9rem;
+    color: #00796b;
+    margin-top: 5px;
+  }
+  
+  /* Styling for links */
+  .session-title a {
+    text-decoration: none;
+    color: #00796b;
+  }
+  
+  .session-title a:hover {
+    text-decoration: underline;
+    color: #004d40;
+  }
+  
+  /* Add some hover effect to session cards */
+  .session:hover {
+    background-color: #b2ebf2;
+    cursor: pointer;
+  }
+  
+  /* Styling for track columns */
+  .track-1, .track-2, .track-3, .track-4 {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+
+  /* ปรับแต่ง select */
+select {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* เปลี่ยนสี border เมื่อ hover */
+  select:hover {
+    border-color: #9d9d9d;
+  }
+  
+  /* เมื่อ select ถูกเลือก */
+  select:focus {
+    border-color: #898989;
+    background-color: #e9f2ff;
+  }
+  
+  /* ปรับแต่ง option */
+  option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* เปลี่ยนสี option เมื่อ hover */
+  option:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+
+  .c-name{
+    background-color: #352dc5;
+    padding: 7px;
+    margin: 15px 0 0px;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    justify-content: space-between;
+    border-radius: 5px;
+  }
+  .img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .c-time{
+    background-color: #67d1a8;
+    padding: 7px;
+    min-height: 30px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+  }
+
+/* Modal Background */
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Modal overlay - covers the entire screen behind the modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* One step behind the modal */
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Inside modal styling */
+  .modal {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .modal h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .modal p {
+    margin: 8px 0;
+  }
+  
+  .modal .session-time,
+  .modal .session-service {
+    display: block;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Button inside modal */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Close the modal smoothly */
+  button.close-btn {
+    background-color: red;
+    margin-top: 10px;
+  }
+  
+  /* Close button hover */
+  button.close-btn:hover {
+    background-color: darkred;
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 500px) {
+    .modal-content {
+      width: 90%;
+      max-width: 100%;
+    }
+  
+    .modal h3 {
+      font-size: 16px;
+    }
+  }
+  
+  
+  
+  
+  

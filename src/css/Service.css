@@ -1,0 +1,16 @@
+.h-stepname{
+    background-color: rgb(51, 193, 155);
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+.b-stepname{
+    background-color: rgba(84, 84, 84, 0.145);
+    height: 100%;
+    padding: 10px;
+}
+.b-subdata{
+    background-color: white;
+    padding: 15px;
+    margin: 15px 0px 15px 0px;
+}
